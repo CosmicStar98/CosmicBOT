@@ -456,6 +456,6 @@ socket.on('talk',function(data){
 setInterval(function(){
 if(socket.connected==false) {
 	console.log('Disconnected from the server. Restarting')
-	setTimeout(function(){maggot}, 1000)
+	setTimeout(function(){reconnected}, 1000)
 }
 }, 3000);
