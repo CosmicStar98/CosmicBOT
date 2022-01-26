@@ -7,8 +7,8 @@ console.log('╚█████╔╝╚█████╔╝██████�
 console.log('░╚════╝░░╚════╝░╚═════╝░╚═╝░░░░░╚═╝╚═╝░╚════╝░╚═════╝░░╚════╝░░░░╚═╝░░░')
 console.log('   ║                          ║   ')
 console.log('█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█')
-console.log('█          Version: ①.⑥.⑦        █')
-console.log('█ Build Date: January 25th, 2022 █')
+console.log('█          Version: ①.⑥.⑧        █')
+console.log('█ Build Date: January 26th, 2022 █')
 console.log('█       Developed by: Cosmic     █')
 console.log('█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█')
 console.log('                                                                       ')
@@ -75,21 +75,39 @@ var commands = {
 		cmdcount++
 		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Commands:✰</b><hr /> <li>c#echo</li><br /> <li>c#message</li><br /> <li>c#bonzibuddy</li><br /> <li>c#bonzibuddy2</li><br /> <li>c#cyberpunk</li><br /> <li>c#drivepower</li><br /> <li>c#bigsmoke</li><br /> <li>c#vaporwave</li><br /> <li>c#unvaporwave</li><br /> <li>c#gabe</li><br /> <li>c#fakeerrors</li><br /> <hr /><h6>Commands Page 2.</h6><hr />'
 	},
+	cmds3(txt){
+		console.log('Loaded cmds3 menu.')
+		cmdcount++
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Commands:✰</b><hr /> <li>c#matrix</li><br /> <li>c#dvd</li><br /> <li>c#logo</li><br /> <li>c#google</li><br /> <li>c#ddg</li><br /> <li>c#bing</li><br /> <li>c#yt_search</li><br /> <li>c#pacertest</li><br /> <hr /><h6>Commands Page 3.</h6><hr />'
+	},
+	newcmds(txt){
+		console.log('Loaded newcmds menu.')
+		cmdcount++
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰New Commands:✰</b><hr /> <li>c#cmds3</li><br /> <li>c#pacertest</li><br /> <li>c#matrix</li><br /> <li>c#dvd</li><br /> <li>c#google</li><br /> <li>c#ddg</li><br /> <li>c#bing</li><br /> <li>c#yt_search</li><br /> <li>c#echo</li><br /> <li>c#calander</li><br /> <li>c#message</li><br /> <li>c#bigsmoke</li><br /> <li>c#asshole</li><br /> <li>c#owo</li><br /> <hr /><h6>New Commands.</h6><hr />'
+	},
 	help1(txt){
 		if(txt.startsWith('c#')){
-            return "This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b> or <b>c#cmds2</b>!"
+            return "This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b>, <b>c#cmds2</b> or <b>c#cmds3</b>!"
         }
 		console.log('Loaded defunct help1 menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#cmds1</li><br /> <li>c#cmds2</li> <hr /><b>✰Error 404:✰</b><hr />This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b> or <b>c#cmds2</b>!<br /> <hr /><h6>Help Page 1.</h6><hr />'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#cmds1</li><br /> <li>c#cmds2</li> <li>c#cmds3</li> <hr /><b>✰Error 404:✰</b><hr />This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b>, <b>c#cmds2</b> or <b>c#cmds3</b>!<br /> <hr /><h6>Help Page 1.</h6><hr />'
 	},
 	help2(txt){
 		if(txt.startsWith('c#')){
-            return "This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b> or <b>c#cmds2</b>!"
+            return "This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b>, <b>c#cmds2</b> or <b>c#cmds3</b>!"
         }
 		console.log('Loaded defunct help2 menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#cmds1</li><br /> <li>c#cmds2</li> <hr /><b>✰Error 404:✰</b><hr />This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b> or <b>c#cmds2</b>!<br /> <hr /><h6>Help Page 1.</h6><hr />'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#cmds1</li><br /> <li>c#cmds2</li> <li>c#cmds3</li> <hr /><b>✰Error 404:✰</b><hr />This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b>, <b>c#cmds2</b> or <b>c#cmds3</b>!<br /> <hr /><h6>Help Page 2.</h6><hr />'
+	},
+	help3(txt){
+		if(txt.startsWith('c#')){
+            return "This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b>, <b>c#cmds2</b> or <b>c#cmds3</b>!"
+        }
+		console.log('Loaded defunct help2 menu.')
+		cmdcount++
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#cmds1</li><br /> <li>c#cmds2</li> <li>c#cmds3</li> <hr /><b>✰Error 404:✰</b><hr />This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b>, <b>c#cmds2</b> or <b>c#cmds3</b>!<br /> <hr /><h6>Help Page 3.</h6><hr />'
 	},
 	hub(txt){
 		if(txt.startsWith('c#')){
@@ -97,7 +115,7 @@ var commands = {
         }
 		console.log('Loaded hub menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><br /><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><b>✰Commands:✰</b><hr /> <li>c#cmds1</li><br /> <li>c#cmds2</li><br /> <li>c#aboutme</li><br /> <li>c#links</li><br /> <hr /><h6>Hub.</h6><hr />'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><br /><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><b>✰Commands:✰</b><hr /> <li>c#cmds1</li><br /> <li>c#cmds2</li><br />  <li>c#cmds3</li><br /> <li>c#newcmds</li><br /> <li>c#aboutme</li><br /> <li>c#links</li><br /> <hr /><h6>Hub.</h6><hr />'
 	},
 	links(txt){
 		if(txt.startsWith('c#')){
@@ -113,7 +131,7 @@ var commands = {
         }
 		console.log('Loaded aboutme menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><div><h4>Version ①.⑥.⑦</h4><br><hr>Hello, I am <b>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</b>! If you need my assistance please start by using <b>c#hub</b>. <hr><div><h5>⌬ Developed by: Cosmic ⌬</h5></div></p>'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><div><h4>Version ①.⑥.⑧</h4><br><hr>Hello, I am <b>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</b>! If you need my assistance please start by using <b>c#hub</b>. <hr><div><h5>⌬ Developed by: Cosmic ⌬</h5></div></p>'
 	},
 	fakeerrors(txt){
 		if(txt.startsWith('c#')){
@@ -138,6 +156,14 @@ var commands = {
 		console.log('Loaded emotes menu.')
 		cmdcount++
 		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><b>✰Emotes:✰</b><hr /><li>c#backflip</li><br /> <li>c#swagflip</li><br /> <hr /><h6>Emote Picker.</h6><hr />'
+	},
+	calander(txt){
+		if(txt.startsWith('c#')){
+            return "jajajajjaaa nice command lmao xddd fuck you"
+        }
+		console.log('Loaded calander menu.')
+		cmdcount++
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><b>✰Calander:✰</b><hr /><form><input type="date"><br><br></form><br /> <hr /><h6>Calander.</h6><hr />'
 	},
 	yt_search(txt){
 		if(txt==""){
@@ -304,6 +330,13 @@ var commands = {
 	cmdcount++
 	return 'Well, hello there! I do not believe we have been properly introduced. I am BonziBUDDY! Nice to meet you! Since this is the first time we have met, I would like to tell you a little about myself. I am your friend and BonziBUDDY! I have the ability to learn from you. The more we browse, search, and travel the internet together, the smarter I will become! Not that I am not already smart!'
     },
+	pacertest(txt){
+	if(txt.startsWith('c?')){
+        return "hahahaha nice copypasta lmao hahaha fuck you"
+    }
+	cmdcount++
+	return 'The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. [beep] A single lap should be completed each time you hear this sound. [ding] Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start.'
+    },
 	logo(txt){
 	if(txt.startsWith('c#')){
         return "- - <h5>⌬ Developed by: Cosmic ⌬</h5>"
@@ -377,12 +410,28 @@ var commands = {
     },
 	botver(txt){
 	cmdcount++
-	return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><div><h4>Version: ①.⑥.⑦</h4><hr><h4>Automated Beta</h4><hr>'
+	return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><div><h4>Version: ①.⑥.⑧</h4><hr><h4>Automated Beta</h4><hr>'
     },
 	message(txt){
 		cmdcount++
 		console.log('You have a new message!!\n"' + txt + '"')
         return ("<h3>A message has been sent into the command terminal. An admin monitoring the terminal will see your message!</h3>\n\n\n Your sent message: " + [txt])
+    },
+	matrix(txt){
+	if(txt.startsWith('c#')){
+        return "jajajajajajja shut the fuck up skiddie!"
+    }
+	console.log('Loaded hacker text.')
+	cmdcount++
+	return '- - <marquee direction="down" bgcolor="black"><font color="green">010100100110100100101001101010110101010101010001001001010100101010101010101010101000101100101001001110001010011001101001010110110101010101010101010001011001010011010101010001011001010010011100010100110011010010101101101010101010101010100010110010100111010101010001011001010010011100010100110011010010101101101010101010101010100010110010100111010101010001011001010010011100010100110011010010100101001001101001001010011010101101010101010100010010010101001010101010101010101010001011001010010011100010100110011010010101101101010101010101010100010110010100110101010100010110010100100111000101001100110100101011011010101010101010101000101100101001110101010100010110010100100111000101001100110100101011011010101010101010101000101100101001110101010100010110010100100111000101001101010010011010010010100110101011010101010101000100100101010010101010101010101010100010110010100100111000101001100110100101011011010101010101010101000101100101001101010101000101100101001001110001010011001101001010110110101010101010101010001011001010011101010101000101100101001001110001010011001101001010110110101010101010101010001011001010011101010101000101100101001001110001010011001101001010010100100110100100101001101010110101010101010001001001010100101010101010101010101000101100101001001110001010011001101001010110110101010101010101010001011001010011010101010001011001010010011100010100110011010010101101101010101010101010100010110010100111010101010001011001010010011100010100110011010010101101101010101010101010100010110010100111010101010001011001010010011100010100110011010010101101101010101010101010100010110010100100110100101011011010101010101010101000101100101001</font></marquee>'
+    },
+	dvd(txt){
+	if(txt.startsWith('c#')){
+        return "hahahaha nice fake error lmao hahaha fuck you"
+    }
+	console.log('Loaded dvd screensaver.')
+	cmdcount++	
+	return '- <marquee direction="down" width="150" height="100" behavior="alternate" bgcolor="black">   <marquee behavior="alternate"><font color="grey"><b><h4>🅳🆅🅳</h4></b></font></marquee> </marquee>'
     },
 	ban(txt){
 	if(txt.startsWith('c#')){
