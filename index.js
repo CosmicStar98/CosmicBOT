@@ -20,7 +20,7 @@ var reconnected = function(){
 	socket.emit('login',{name:'CosmicBOT {c#hub}'})
     socket.on('talk',function(data){
         var text = data.text
-        if(text.startsWith('c?')){
+        if(text.startsWith('c#')){
             text = text.slice(2)
             var cmd = text.split(' ')[0]
             var oth = text.slice(cmd.length+1)
