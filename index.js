@@ -7,8 +7,8 @@ console.log('╚█████╔╝╚█████╔╝██████�
 console.log('░╚════╝░░╚════╝░╚═════╝░╚═╝░░░░░╚═╝╚═╝░╚════╝░╚═════╝░░╚════╝░░░░╚═╝░░░')
 console.log('   ║                          ║   ')
 console.log('█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█')
-console.log('█          Version: ①.⑥.⑧        █')
-console.log('█ Build Date: January 26th, 2022 █')
+console.log('█          Version: ①.⑥.⑨        █')
+console.log('█ Build Date: February 6th, 2022 █')
 console.log('█       Developed by: Cosmic     █')
 console.log('█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█')
 console.log('                                                                       ')
@@ -65,49 +65,35 @@ var commands = {
 		cmdcount++
 		socket.emit('command', {list:['owo',txt]})
     },
-	cmds1:function(){
-		console.log('Loaded cmds1 menu.')
+	cmds:function(){
+		console.log('Loaded commands menu.')
 		cmdcount++
-		return "- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Commands:✰</b><hr /><li>c#joke</li><br /> <li>c#fact</li><br /> <li>c#asshole</li><br /> <li>c#owo</li><br /> <li>c#bees</li><br /> <li>c#linux</li><br /> <li>c#triggered</li><br /> <li>c#pawn</li><br /> <li>c#emotes</li><br /> <li>c#colors</li><br /> <hr /><h6>Commands Page 1.</h6><hr />"
+		return "- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Commands:✰</b><hr /><li>c#copypastas</li><br /> <li>c#utilities</li><br /> <li>c#fun</li><br /> <li>c#misc</li><br /> <hr /><h6>Commands.</h6><hr />"
 	},
-	cmds2(txt){
-		console.log('Loaded cmds2 menu.')
+		copypastas(txt){
+		console.log('Loaded copypastas menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Commands:✰</b><hr /> <li>c#echo</li><br /> <li>c#message</li><br /> <li>c#bonzibuddy</li><br /> <li>c#bonzibuddy2</li><br /> <li>c#cyberpunk</li><br /> <li>c#drivepower</li><br /> <li>c#bigsmoke</li><br /> <li>c#vaporwave</li><br /> <li>c#unvaporwave</li><br /> <li>c#gabe</li><br /> <li>c#fakeerrors</li><br /> <hr /><h6>Commands Page 2.</h6><hr />'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Copypastas:✰</b><hr /> <li>c#bigsmoke</li><br /> <li>c#drivepower</li><br /> <li>c#gabe</li><br />  <li>c#pacertest</li><br /> <li>c#triggered</li><br /> <li>c#cyberpunk</li><br /> <li>c#bonzibuddy</li><br /> <li>c#bonzibuddy2</li><br /> <li>c#bees</li><br /> <li>c#pawn</li><br /> <li>c#linux</li><br /> <hr /><h6>Copypastas.</h6><hr />'
 	},
-	cmds3(txt){
-		console.log('Loaded cmds3 menu.')
+	utilities(txt){
+		console.log('Loaded utilities menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Commands:✰</b><hr /> <li>c#matrix</li><br /> <li>c#dvd</li><br /> <li>c#logo</li><br /> <li>c#google</li><br /> <li>c#ddg</li><br /> <li>c#bing</li><br /> <li>c#yt_search</li><br /> <li>c#pacertest</li><br /> <hr /><h6>Commands Page 3.</h6><hr />'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Utilities:✰</b><hr /> <li>c#message</li><br /> <li>c#google</li><br /> <li>c#ddg</li><br /> <li>c#bing</li><br /> <li>c#yt_search</li><br /> <li>c#emotes</li><br /> <li>c#colors</li><br /> <hr /><h6>Utilities.</h6><hr />'
 	},
-	newcmds(txt){
-		console.log('Loaded newcmds menu.')
+	fun(txt){
+		console.log('Loaded fun menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰New Commands:✰</b><hr /> <li>c#cmds3</li><br /> <li>c#pacertest</li><br /> <li>c#matrix</li><br /> <li>c#dvd</li><br /> <li>c#google</li><br /> <li>c#ddg</li><br /> <li>c#bing</li><br /> <li>c#yt_search</li><br /> <li>c#echo</li><br /> <li>c#calander</li><br /> <li>c#message</li><br /> <li>c#bigsmoke</li><br /> <li>c#asshole</li><br /> <li>c#owo</li><br /> <hr /><h6>New Commands.</h6><hr />'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Fun Commands:✰</b><hr /> <li>c#joke</li><br /> <li>c#fact</li><br /> <li>c#asshole</li><br /> <li>c#owo</li><br /> <li>c#vaporwave</li><br /> <li>c#unvaporwave</li><br /> <li>c#echo</li><br /> <hr /><h6>Fun.</h6><hr />'
 	},
-	help1(txt){
-		if(txt.startsWith('c#')){
-            return "This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b>, <b>c#cmds2</b> or <b>c#cmds3</b>!"
-        }
-		console.log('Loaded defunct help1 menu.')
+	misc(txt){
+		console.log('Loaded misc menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#cmds1</li><br /> <li>c#cmds2</li> <li>c#cmds3</li> <hr /><b>✰Error 404:✰</b><hr />This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b>, <b>c#cmds2</b> or <b>c#cmds3</b>!<br /> <hr /><h6>Help Page 1.</h6><hr />'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Misc Commands:✰</b><hr /> <li>c#fakeerrors</li><br /> <li>c#matrix</li><br /> <li>c#dvd</li><br /> <li>c#logo</li><br /> <li>c#calander</li><br /> <hr /><h6>Miscellaneous.</h6><hr />'
 	},
-	help2(txt){
-		if(txt.startsWith('c#')){
-            return "This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b>, <b>c#cmds2</b> or <b>c#cmds3</b>!"
-        }
-		console.log('Loaded defunct help2 menu.')
+	changelog(txt){
+		console.log('Loaded changelog menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#cmds1</li><br /> <li>c#cmds2</li> <li>c#cmds3</li> <hr /><b>✰Error 404:✰</b><hr />This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b>, <b>c#cmds2</b> or <b>c#cmds3</b>!<br /> <hr /><h6>Help Page 2.</h6><hr />'
-	},
-	help3(txt){
-		if(txt.startsWith('c#')){
-            return "This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b>, <b>c#cmds2</b> or <b>c#cmds3</b>!"
-        }
-		console.log('Loaded defunct help2 menu.')
-		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#cmds1</li><br /> <li>c#cmds2</li> <li>c#cmds3</li> <hr /><b>✰Error 404:✰</b><hr />This command has been depreciated since version <b>①.⑤.③</b> please move to <b>c#cmds1</b>, <b>c#cmds2</b> or <b>c#cmds3</b>!<br /> <hr /><h6>Help Page 3.</h6><hr />'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰①.⑥.⑨ Changelog:✰</b><hr /> <li>Updated to <b>①.⑥.⑨</b></li><br /> <li>Sorted the commands into categories</li><br /> <li>Removed legacy commands</li><br /> <hr /><h6>Changelog.</h6><hr />'
 	},
 	hub(txt){
 		if(txt.startsWith('c#')){
@@ -115,7 +101,7 @@ var commands = {
         }
 		console.log('Loaded hub menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><br /><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><b>✰Commands:✰</b><hr /> <li>c#cmds1</li><br /> <li>c#cmds2</li><br />  <li>c#cmds3</li><br /> <li>c#newcmds</li><br /> <li>c#aboutme</li><br /> <li>c#links</li><br /> <hr /><h6>Hub.</h6><hr />'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><br /><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><b>✰Commands:✰</b><hr /> <li>c#cmds</li><br /> <li>c#changelog</li><br /> <li>c#aboutme</li><br /> <li>c#links</li><br /> <hr /><h6>Hub.</h6><hr />'
 	},
 	links(txt){
 		if(txt.startsWith('c#')){
@@ -131,7 +117,7 @@ var commands = {
         }
 		console.log('Loaded aboutme menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><div><h4>Version ①.⑥.⑧</h4><br><hr>Hello, I am <b>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</b>! If you need my assistance please start by using <b>c#hub</b>. <hr><div><h5>⌬ Developed by: Cosmic ⌬</h5></div></p>'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><div><h4>Version ①.⑥.⑨</h4><br><hr>Hello, I am <b>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</b>! If you need my assistance please start by using <b>c#hub</b>. <hr><div><h5>⌬ Developed by: Cosmic ⌬</h5></div></p>'
 	},
 	fakeerrors(txt){
 		if(txt.startsWith('c#')){
@@ -410,7 +396,7 @@ var commands = {
     },
 	botver(txt){
 	cmdcount++
-	return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><div><h4>Version: ①.⑥.⑧</h4><hr><h4>Automated Beta</h4><hr>'
+	return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><div><h4>Version: ①.⑥.⑨</h4><hr><h4>Organization Update</h4><hr>'
     },
 	message(txt){
 		cmdcount++
