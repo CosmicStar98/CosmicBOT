@@ -6,11 +6,11 @@ console.log('██║░░██╗██║░░██║░╚═══█�
 console.log('╚█████╔╝╚█████╔╝██████╔╝██║░╚═╝░██║██║╚█████╔╝██████╦╝╚█████╔╝░░░██║░░░')
 console.log('░╚════╝░░╚════╝░╚═════╝░╚═╝░░░░░╚═╝╚═╝░╚════╝░╚═════╝░░╚════╝░░░░╚═╝░░░')
 console.log('   ║                          ║   ')
-console.log('█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█')
-console.log('█          Version: ①.⑥.⑨        █')
-console.log('█ Build Date: February 6th, 2022 █')
-console.log('█       Developed by: Cosmic     █')
-console.log('█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█')
+console.log('█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█')
+console.log('█           Version: ①.⑥.⑨        █')
+console.log('█ Build Date: February 13th, 2022 █')
+console.log('█       Developed by: Cosmic      █')
+console.log('█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█')
 console.log('                                                                       ')
 var socket = io("http://server.erik.red:3000")
 socket.emit('login',{name:'CosmicBOT {c#hub}'})
@@ -78,12 +78,12 @@ var commands = {
 	utilities(txt){
 		console.log('Loaded utilities menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Utilities:✰</b><hr /> <li>c#message</li><br /> <li>c#google</li><br /> <li>c#ddg</li><br /> <li>c#bing</li><br /> <li>c#yt_search</li><br /> <li>c#emotes</li><br /> <li>c#colors</li><br /> <hr /><h6>Utilities.</h6><hr />'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Utilities:✰</b><hr /> <li>c#message</li><br /> <li>c#google</li><br /> <li>c#ddg</li><br /> <li>c#bing</li><br /> <li>c#video</li><br /> <li>c#emotes</li><br /> <li>c#colors</li><br /> <hr /><h6>Utilities.</h6><hr />'
 	},
 	fun(txt){
 		console.log('Loaded fun menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Fun Commands:✰</b><hr /> <li>c#joke</li><br /> <li>c#fact</li><br /> <li>c#asshole</li><br /> <li>c#owo</li><br /> <li>c#vaporwave</li><br /> <li>c#unvaporwave</li><br /> <li>c#echo</li><br /> <hr /><h6>Fun.</h6><hr />'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Fun Commands:✰</b><hr /> <li>c#joke</li><br /> <li>c#fact</li><br /> <li>c#nigger</li><br /> <li>c#skiddie</li><br /> <li>c#asshole</li><br /> <li>c#owo</li><br /> <li>c#vaporwave</li><br /> <li>c#unvaporwave</li><br /> <li>c#echo</li><br /> <hr /><h6>Fun.</h6><hr />'
 	},
 	misc(txt){
 		console.log('Loaded misc menu.')
@@ -150,15 +150,19 @@ var commands = {
 		console.log('Loaded calander menu.')
 		cmdcount++
 		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><b>✰Calander:✰</b><hr /><form><input type="date"><br><br></form><br /> <hr /><h6>Calander.</h6><hr />'
-	},
-	yt_search(txt){
-		if(txt==""){
-			return 'Enter the YouTube search text to get this result.'
-		} else {
+	nigger(txt){
 		cmdcount++
-		console.log('https://www.youtube.com/search?q=' + txt)
-        return ('There is your requested website: https://www.youtube.com/search?q=' + [txt])
-		}
+		console.log('Called somebody a nigger')
+        return ([txt]+[' is a nigger'])
+    },
+	skiddie(txt){
+		cmdcount++
+		console.log('Called somebody a script kiddie')
+        return ([txt]+[' is a skiddie'])
+    },
+	video(txt){
+		console.log('YouTube link played. URL: https://www.youtube.com/watch?=' + txt)
+		socket.emit('command', {list:['youtube',txt]})
     },
 	google(txt){
 		if(txt==""){
