@@ -150,7 +150,8 @@ var commands = {
 		console.log('Loaded calander menu.')
 		cmdcount++
 		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><b>✰Calander:✰</b><hr /><form><input type="date"><br><br></form><br /> <hr /><h6>Calander.</h6><hr />'
-	nigger(txt){
+	},
+		nigger(txt){
 		cmdcount++
 		console.log('Called somebody a nigger')
         return ([txt]+[' is a nigger'])
