@@ -7,15 +7,13 @@ console.log('╚█████╔╝╚█████╔╝██████�
 console.log('░╚════╝░░╚════╝░╚═════╝░╚═╝░░░░░╚═╝╚═╝░╚════╝░╚═════╝░░╚════╝░░░░╚═╝░░░')
 console.log('   ║                          ║   ')
 console.log('█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█')
-console.log('█           Version: ①.⑥.⑨        █')
-console.log('█ Build Date: February 13th, 2022 █')
 console.log('█       Developed by: Cosmic      █')
 console.log('█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█')
 console.log('                                                                       ')
 var socket = io("http://server.erik.red:3000")
 socket.emit('login',{name:'CosmicBOT {c#hub}'})
-socket.on('reconnected',reconnected)
-var reconnected = function(){
+socket.on('reconnected',reconnect)
+var reconnect = function(){
     var socket = io("http://server.erik.red:3000")
 	socket.emit('login',{name:'CosmicBOT {c#hub}'})
     socket.on('talk',function(data){
@@ -32,8 +30,9 @@ var reconnected = function(){
             }
         }
     })
-    socket.on('reconnected',reconnected)
-}
+    socket.on('reconnected',reconnect)
+};
+socket.emit("command", { list: ["name", "CosmicBOT {c#hub}"] });
 socket.emit('command', {list:['pitch','77']})
 socket.emit('command', {list:['speed','146']})
 var lists = [];
@@ -42,6 +41,13 @@ var cmdcount = 0;
 var ytcount = 0;
 var sockets = []
 var talkmode = true;
+
+setInterval(function () {
+    socket.emit("talk", {
+        text:
+            '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><div><h4>Version ①.⑥.⑨</h4><br><hr>Hello, I am <b>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</b>! If you need my assistance please start by using <b>c#hub</b>. <hr><div><h5>⌬ Developed by: Cosmic ⌬</h5></div></p>',
+    });
+}, 1800000);
 var commands = {
     echo(txt){
         if(txt.startsWith('c#')){
@@ -88,7 +94,7 @@ var commands = {
 	misc(txt){
 		console.log('Loaded misc menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Misc Commands:✰</b><hr /> <li>c#fakeerrors</li><br /> <li>c#matrix</li><br /> <li>c#dvd</li><br /> <li>c#logo</li><br /> <li>c#calander</li><br /> <hr /><h6>Miscellaneous.</h6><hr />'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><li>c#hub</li> <hr /><b>✰Misc Commands:✰</b><hr /> <li>c#fakeerrors</li><br /> <li>c#matrix</li><br /> <li>c#dvd</li><br /> <li>c#logo</li><br /> <li>c#calendar</li><br /> <hr /><h6>Miscellaneous.</h6><hr />'
 	},
 	changelog(txt){
 		console.log('Loaded changelog menu.')
@@ -143,13 +149,13 @@ var commands = {
 		cmdcount++
 		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><b>✰Emotes:✰</b><hr /><li>c#backflip</li><br /> <li>c#swagflip</li><br /> <hr /><h6>Emote Picker.</h6><hr />'
 	},
-	calander(txt){
+	calendar(txt){
 		if(txt.startsWith('c#')){
             return "jajajajjaaa nice command lmao xddd fuck you"
         }
 		console.log('Loaded calander menu.')
 		cmdcount++
-		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><b>✰Calander:✰</b><hr /><form><input type="date"><br><br></form><br /> <hr /><h6>Calander.</h6><hr />'
+		return '- - <h3>𝘾𝙤𝙨𝙢𝙞𝙘𝐁𝐎𝐓</h3><h5>⌬ Developed by: Cosmic ⌬</h5> <hr /><b>✰Calendar:✰</b><hr /><form><input type="date"><br><br></form><br /> <hr /><h6>Calendar.</h6><hr />'
 	},
 		nigger(txt){
 		cmdcount++
@@ -162,7 +168,7 @@ var commands = {
         return ([txt]+[' is a skiddie'])
     },
 	video(txt){
-		console.log('YouTube link played. URL: https://www.youtube.com/watch?=' + txt)
+		console.log('Played a Youtube video. URL: https://www.youtube.com/watch?=' + txt)
 		socket.emit('command', {list:['youtube',txt]})
     },
 	google(txt){
@@ -170,7 +176,7 @@ var commands = {
 			return 'Please enter this value, if you wish to enter for Google search.'
 		} else {
 		cmdcount++
-		console.log('https://www.google.com/search?q=' + txt)
+		console.log('Searched on Google. URL: https://www.google.com/search?q=' + txt)
         return ('Google Link: https://www.google.com/search?q=' + [txt])
 		}
     },
@@ -179,7 +185,7 @@ var commands = {
 			return 'Please enter this value, if you wish to enter for DuckDuckGo search.'
 		} else {
 		cmdcount++
-		console.log('https://duckduckgo.com/?q=' + txt)
+		console.log('Searched on DuckDuckGo. URL: https://duckduckgo.com/?q=' + txt)
         return ('DuckDuckGo Link: https://duckduckgo.com/?q=' + [txt])
 		}
     },
@@ -188,7 +194,7 @@ var commands = {
 			return 'Please enter this value, if you wish to enter for Bing search.'
 		} else {
 		cmdcount++
-		console.log('https://www.bing.com/search?q=' + txt)
+		console.log('Searched on Bing. URL: https://www.bing.com/search?q=' + txt)
         return ('Bing Link: https://www.bing.com/search?q=' + [txt])
 		}
     },
@@ -322,7 +328,7 @@ var commands = {
 	return 'Well, hello there! I do not believe we have been properly introduced. I am BonziBUDDY! Nice to meet you! Since this is the first time we have met, I would like to tell you a little about myself. I am your friend and BonziBUDDY! I have the ability to learn from you. The more we browse, search, and travel the internet together, the smarter I will become! Not that I am not already smart!'
     },
 	pacertest(txt){
-	if(txt.startsWith('c?')){
+	if(txt.startsWith('c#')){
         return "hahahaha nice copypasta lmao hahaha fuck you"
     }
 	cmdcount++
@@ -458,17 +464,17 @@ var commands = {
 	if(txt.startsWith('c#')){
         return "hahahaha nice fake error lmao hahaha fuck you"
     }
-	console.log('Loaded ban message.')
+	console.log('Loaded ban message. Reason: ' + [txt])
 	cmdcount++
-	return '- - <br><h2>You got banned!</h2><br><br><b>Why? </b><br> Jokes on you! This is just a test! You did not actually get banned lol<br><br><br><b>When is it over?</b><br>idk I guess whenever this message goes away xD'
+	return '- - <br><h2>You got banned!</h2><br><br><b>Why? </b><br> ' + [txt] + ' <br><br><br><b>When is it over?</b><br>idk I guess whenever this message goes away xD'
     },
 	kicked(txt){
 	if(txt.startsWith('c#')){
         return "hahahaha nice fake error lmao hahaha fuck you"
     }
-	console.log('Loaded kick message.')
+	console.log('Loaded kick message. Reason: ' + [txt])
 	cmdcount++
-	return '- - <br><h2>You got kicked!</h2><br> <br><b>Why? </b><br> Jokes on you! This is just a test! You did not actually get kicked lmao'
+	return '- - <br><h2>You got kicked!</h2><br> <br><b>Why? </b><br> ' + [txt] + ''
     },
 	unsupported(txt){
 	if(txt.startsWith('c#')){
@@ -495,7 +501,7 @@ socket.on('talk',function(data){
 });
 setInterval(function(){
 if(socket.connected==false) {
-	console.log('Disconnected from the server. Restarting')
-	setTimeout(function(){reconnected}, 1000)
+	console.log('Disconnected from the server. Attempting to re-connect...')
+	setTimeout(socket.on('disconnected',reconnect), 1000)
 }
 }, 3000);
